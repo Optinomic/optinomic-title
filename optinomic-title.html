@@ -124,28 +124,33 @@ Basically a extended &lt;h1&gt; inside a Optinomic-App.
         properties: {
             h1: {
                 type: String,
-                value: "Optinomic"
+                value: "Optinomic",
+                observer: '_dataChanged'
             },
             h2: {
                 type: String,
-                value: null
+                value: null,
+                observer: '_dataChanged'
             },
             h3: {
                 type: String,
-                value: null
+                value: null,
+                observer: '_dataChanged'
             },
             small: {
                 type: Boolean,
-                value: false
+                value: false,
+                observer: '_dataChanged'
             },
             show_toggle_button: {
                 type: Boolean,
-                value: false
+                value: false,
+                observer: '_dataChanged'
             },
 
         },
 
-        ready: function() {
+        _dataChanged: function() {
             this.__resizeGrafic();
         },
     });
